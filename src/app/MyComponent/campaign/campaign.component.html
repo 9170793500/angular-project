@@ -36,7 +36,7 @@
            <th>Extra device</th>
            <th>Assign</th>
            <th>Assign date</th>
-           <th>Edit</th>
+           <th>Actions</th>
          </tr>
        </thead>
     
@@ -53,21 +53,16 @@
            <td>{{ item.assign }}</td>
            <td>{{ item.assign_date }}</td>
            <td>
-             <form (submit)="submitForm()">
-               <button
-                 class="open-button"
-                 style="
-                   color: #0a1aff;
-                   width: 25px;
-                   margin-inline-end: 23px;
-                   background-color: aqua;
-                   border-color: aqua;
-                 "
-                 type="submit"
-               >
-                 &#9998;
-               </button>
-             </form>
+             
+            <button
+            class="btn btn-primary"
+            style="background-color: blue; color: white; float: right; width: 100px; height: 40px; border-radius: 10px;"
+            type="button"
+            (click)="openUpdateForm(item.sno)"
+          >
+            Edit
+          </button>
+             
            </td>
          </tr>
        </tbody>

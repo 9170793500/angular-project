@@ -7,6 +7,9 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
+  getCampaigns() {
+    throw new Error('Method not implemented.');
+  }
   private baseUrl = 'http://localhost:8000/api';
 
   constructor(private http: HttpClient) {}
@@ -30,6 +33,8 @@ export class ApiService {
       })
     );
   }
+
+  
 }
 
   

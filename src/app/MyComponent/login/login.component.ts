@@ -19,9 +19,9 @@ export class LoginComponent {
     const loggedIn = this.authService.login(this.username, this.password);
 
     if (loggedIn) {
-      this.router.navigate(['/dashboard']); // Navigate to dashboard on successful login
+      this.router.navigate(['/dashboard']); 
     } else {
-      console.log('Invalid credentials. Please try again.'); // Display an error message for unsuccessful login.
+      console.log('Invalid credentials. Please try again.');
     }
   }
 }

@@ -3,11 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  
 })
+
 export class DashboardComponent implements OnInit {
   
     systemInventory: any[] = [];
@@ -20,9 +23,6 @@ export class DashboardComponent implements OnInit {
     searchText = new FormControl('');
     searchInputSystem = new FormControl('');
    
-    
-   
-  
     constructor(private http: HttpClient) {}
   
     ngOnInit(): void {
@@ -37,9 +37,7 @@ export class DashboardComponent implements OnInit {
         this.systemInventory = data;
         this.inventoryItemCount = this.systemInventory.length;
       });
-  
     }
-  
     fetchMouseData() {
       this.http.get<any[]>('http://localhost:8000/api/mouse').subscribe((data) => {
         this.mouseData = data;
@@ -54,8 +52,7 @@ export class DashboardComponent implements OnInit {
       });
     }
     calculateTotalQuantity() {
-      
-      
+    
       this.totalQuantity = this.stockData.reduce((total, item) => {
         console.log('Item:', item);
         return total + parseInt(item.quantity || '0');
@@ -64,8 +61,7 @@ export class DashboardComponent implements OnInit {
     
   
     submitForm() {
-      // Implement the form submission logic here
-      // For example, you can make HTTP requests, update data, etc.
+   
     }
     
   }

@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<form >
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <h1>Update Inventory</h1>
+
+      <div class="formbold-mb-3">
+        <label for="storage" class="formbold-form-label"><strong>Storage</strong></label>
+        <input type="text" name="storage" id="storage" placeholder="Storage" class="formbold-form-input" [(ngModel)]="item.storage" />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="storage" class="formbold-form-label"><strong>Ram</strong></label>
+        <input type="text" name="ram" id="ram" placeholder="ram" class="formbold-form-input" [(ngModel)]="item.storage" />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="storage" class="formbold-form-label"><strong>Charger_serialnum</strong></label>
+        <input type="text" name="storage" id="charger_serialnum" placeholder="charger_serialnum" class="formbold-form-input" [(ngModel)]="item.storage" />
+      </div>
+      
+      <div class="formbold-mb-3">
+        <label for="storage" class="formbold-form-label"><strong>Mouse serialnum</strong></label>
+        <input type="text" name="mouse_serialnum" id="mouse_serialnum" placeholder="mouse_serialnum" class="formbold-form-input" [(ngModel)]="item.storage" />
+      </div>
+   
+
+      <div class="formbold-mb-3">
+        <label for="extra_device" class="formbold-form-label"><strong>Extra Device</strong></label>
+        <input type="text" name="extra_device" id="extra_device" placeholder="Extra Device" class="formbold-form-input" [(ngModel)]="item.extra_device" />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="assign" class="formbold-form-label"><strong>Assign</strong></label>
+        <input type="text" name="assign" id="assign" placeholder="Assign" class="formbold-form-input" [(ngModel)]="item.assign" />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="assign_date" class="formbold-form-label"><strong>Assign Date</strong></label>
+        <input type="date" name="assign_date" id="assign_date" placeholder="Assign Date" class="formbold-form-input" [(ngModel)]="item.assign_date" />
+      </div>
+
+      <a routerLink="./Update">
+        <button class="btn btn-primary"
+                style="background-color: blue; color: white; float: right; width: 60px; height: 40px; border-radius: 10px;"
+                type="button">Update</button>
+      </a>
+    </div>
+  </div>
+</form>

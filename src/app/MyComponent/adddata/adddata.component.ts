@@ -41,8 +41,8 @@ export class AdddataComponent implements OnInit {
     this.apiService.addSystemInventory(formData).subscribe(
       (response) => {
         console.log('System inventory data added successfully:', response);
-        // Navigate to the dashboard or another route
-        this.router.navigate(['/dashboard']); // Replace '/dashboard' with the actual route
+        // Navigate 
+        this.router.navigate(['/dashboard']);
       },
       (error) => {
         console.error('Error adding system inventory data:', error);

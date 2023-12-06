@@ -2,39 +2,43 @@
 
 
 
-<div class="box-container" style=" margin-left: 230px;   margin-top: 100px; padding: 10px;">
-    <div class="box box1" style="  margin: 35px; ">
+<div class="box-container" style=" margin-left: 230px;   margin-top: 100px; ">
+    <div class="box box1" style="  margin: 35px; padding: 15px; ">
         <div class="text">
-            <h2 class="topic-heading">{{totalQuantity}}</h2>
-            <h2 class="topic">System Quntity</h2>
+            <h2 class="topic-heading" style="font-size: 35px;">{{totalQuantity}}</h2>
+            <h2 class="topic" style="font-size: 15px;">System Quntity</h2>
         </div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
-            alt="Views">
+        <mat-icon style="color:white;" class="material-symbols-outlined">
+          visibility
+          </mat-icon>
     </div>
-    <div class="box box2" style="  margin: 35px; ">
+    <div class="box box2" style="  margin: 35px; padding: 20px; ">
         <div class="text">
-            <h2 class="topic-heading">{{ totalItemCount }}</h2>
-            <h2 class="topic">System Total Device</h2>
+            <h2 class="topic-heading" style="font-size: 35px;">{{ totalItemCount }}</h2>
+            <h2 class="topic" style="font-size: 15px;">System Total 
+              <br> Device</h2>
         </div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
+        <mat-icon style="color:white;" class="material-symbols-outlined">
+          laptop_mac
+        </mat-icon>
     </div>
-    <div class="box box3" style="  margin: 35px; ">
+    <div class="box box3" style="  margin: 30px; padding: 20px; ">
         <div class="text">
-            <h2 class="topic-heading"> {{inventoryItemCount}}</h2>
-            <h2 class="topic">Assign Data</h2>
+            <h2 class="topic-heading" style="font-size: 35px;" > {{inventoryItemCount}}</h2>
+            <h2 class="topic" style="font-size: 15px;">Assign Data</h2>
         </div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
-            alt="comments">
+        <mat-icon style="color:white;" class="material-symbols-outlined">badge</mat-icon>
     </div>
-    <div class="box box4" style="  margin: 35px; ">
+    <div class="box box4" style="  margin: 35px; padding: 15px; ">
         <div class="text">
-            <h2 class="topic-heading">{{totalItem}}</h2>
-            <h2 class="topic">Mouse Device </h2>
+            <h2 class="topic-heading" style="font-size: 35px;">{{totalItem}}</h2>
+            <h2 class="topic" style="font-size: 15px;">Mouse Device </h2>
         </div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
+        <mat-icon style="color:white;" class="material-symbols-outlined">
+          mouse
+          </mat-icon>
     </div>
 </div>
-
 
 <div class="box-container" style="margin-left: 230px; margin-top: 100px; padding: 10px;">
   <!-- ... box1, box2, box3, box4 HTML ... -->
@@ -43,7 +47,7 @@
 <!-- mouse-stock.component.html -->
 <div class="con">
   <div class="row" style="margin-left: 288px; margin-right: 20px;">
-    <div class="p-2 bd-highlight" style="width: 100%; margin-top: 0px;">
+    <div class="p-2 bd-highlight" style="width: 100%; margin-top: -121px;">
       <div class="card">
         <h5 class="card-header">Mouse Stock Data
           <input style="width: 257px;margin-top: 5px;border-radius: -6px;  display: inline-flex; text-align: center;
@@ -135,7 +139,11 @@
                             </tbody>
                           </table>
                     </div>
-                      <a href="#" class="btn btn-block btn-light">View all</a>
+                    <!-- <mat-paginator [length]="10"
+                    [pageSize]="10"
+                    [pageSizeOptions]="[1, 2 , 4,5,6,7,8,9]"
+                    aria-label="Select page">
+                    </mat-paginator> -->
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ import { DashboardComponent } from './MyComponent/dashboard/dashboard.component'
 import { AdddataComponent } from './MyComponent/adddata/adddata.component';
 import { StockComponent } from './MyComponent/stock/stock.component';
 import { MouseComponent } from './MyComponent/mouse/mouse.component';
+import { UpdateComponent } from './MyComponent/update/update.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login page on startup
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'inventory', component: CampaignComponent },
   { path: 'adddata', component: AdddataComponent },
   { path: 'stock', component:StockComponent },
-  { path: 'mouse', component:MouseComponent }
+  { path: 'mouse', component:MouseComponent },
+  { path: 'update/:sno', component: UpdateComponent },
   // ... other routes
 ];
 

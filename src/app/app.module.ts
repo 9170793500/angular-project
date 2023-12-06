@@ -18,6 +18,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
 import { AuthService } from './auth.service';
 import { NgxSearchPipeModule } from 'ngx-search-pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { UpdateComponent } from './MyComponent/update/update.component';
+
+
+
 
 
 
@@ -34,7 +41,8 @@ import { NgxSearchPipeModule } from 'ngx-search-pipe';
     AdddataComponent,
     StockComponent,
     MouseComponent,
-    RegisterComponent
+    RegisterComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { NgxSearchPipeModule } from 'ngx-search-pipe';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxSearchPipeModule
+    NgxSearchPipeModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatPaginatorModule
   ],
   providers: [ApiService,AuthService],
   bootstrap: [AppComponent]

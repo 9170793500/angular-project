@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
+import { ApiService } from '../../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-campaign',
@@ -10,9 +12,13 @@ import { FormControl } from '@angular/forms';
 export class CampaignComponent implements OnInit {
   systemInventry: any[] = [];
   searchInputInventry = new FormControl('');
+  campaigns: any[] = []; 
+  editingCampaign: number | null = null;
+  editedCampaign: any = {};
+  
 
-  constructor(private http: HttpClient) {}
 
+  constructor(private http: HttpClient, private router: Router, private apiService: ApiService) {}
   ngOnInit(): void {
     this.fetchSystemInventry();
   }
@@ -21,9 +27,9 @@ export class CampaignComponent implements OnInit {
     this.http.get<any[]>('http://localhost:8000/api/system_inventry').subscribe((data) => {
       this.systemInventry = data;
     });
+    
   }
 
-  submitForm() {
-   
-  }
+  
+ 
 }
