@@ -1,0 +1,147 @@
+<app-header></app-header>
+
+
+
+<div class="box-container" style=" margin-left: 230px;   margin-top: 100px; padding: 10px;">
+    <div class="box box1" style="  margin: 35px; ">
+        <div class="text">
+            <h2 class="topic-heading">{{totalQuantity}}</h2>
+            <h2 class="topic">System Quntity</h2>
+        </div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+            alt="Views">
+    </div>
+    <div class="box box2" style="  margin: 35px; ">
+        <div class="text">
+            <h2 class="topic-heading">{{ totalItemCount }}</h2>
+            <h2 class="topic">System Total Device</h2>
+        </div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
+    </div>
+    <div class="box box3" style="  margin: 35px; ">
+        <div class="text">
+            <h2 class="topic-heading"> {{inventoryItemCount}}</h2>
+            <h2 class="topic">Assign Data</h2>
+        </div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
+            alt="comments">
+    </div>
+    <div class="box box4" style="  margin: 35px; ">
+        <div class="text">
+            <h2 class="topic-heading">{{totalItem}}</h2>
+            <h2 class="topic">Mouse Device </h2>
+        </div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
+    </div>
+</div>
+
+
+<div class="box-container" style="margin-left: 230px; margin-top: 100px; padding: 10px;">
+  <!-- ... box1, box2, box3, box4 HTML ... -->
+</div>
+
+<!-- mouse-stock.component.html -->
+<div class="con">
+  <div class="row" style="margin-left: 288px; margin-right: 20px;">
+    <div class="p-2 bd-highlight" style="width: 100%; margin-top: 0px;">
+      <div class="card">
+        <h5 class="card-header">Mouse Stock Data
+          <input style="width: 257px;margin-top: 5px;border-radius: -6px;  display: inline-flex; text-align: center;
+          margin-left: 211px;" type="text" class="form-control" id="searchInput" [formControl]="searchText" placeholder="Search input">
+
+
+          <!-- <div class="form-group" style="width: 257px;margin-top: 10px;border-radius: 10px; text-align: center;">
+            <label for="searchInput">Search:</label>
+            <input type="text" class="form-control" id="searchInput" [formControl]="searchText">
+          </div> -->
+        <a routerLink="/mouse">
+          <button class="btn btn-primary"
+                  style="background-color: blue; color: white; float: right; width: 100px; height: 40px;
+                         border-radius: 10px;" type="button">Add stock</button>
+        </a></h5>
+        <div class="card-body">
+
+          <div class="table-fixed">
+          
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sno</th>
+                  <th scope="col">Device Name</th>
+                  <th scope="col">Brand</th>
+                  <th scope="col">Serial number</th>
+                  <th scope="col">Quantity</th>
+                  
+                </tr>
+              </thead>
+              <tbody >
+                  <tr *ngFor="let mouseItem of mouseData  | ngxSearchPipe:searchText.value">
+                  <th scope="row">{{ mouseItem.sno }}</th>
+                  <td>{{ mouseItem.device_name }}</td>
+                  <td>{{ mouseItem.brand }}</td>
+                  <td>{{ mouseItem.serial_number }}</td>
+                  <td>{{ mouseItem.quantity }}</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#" class="btn btn-block btn-light">View all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="con">
+    <div class="row" style="    margin-left: 288px; margin-right: 20px;">
+        <div class="p-2 bd-highlight"  style="  width: 100%;     margin-top:0px;">
+            <div class="card">
+                <h5 class="card-header"> System Stock Data
+                  <input style="width: 257px;margin-top: 5px;border-radius: -6px;  display: inline-flex; text-align: center;
+                  margin-left: 211px;" type="text" class="form-control" id="searchInputSystem" [formControl]="searchInputSystem" placeholder="Search input">
+                    <a routerLink="/stock">
+                        <button class="btn btn-primary"    
+                                style="background-color: blue; color: white;     float: right; width: 100px; height: 40px;
+                                       border-radius: 10px;" type="button">Add stock</button>
+                    </a>
+                </h5>
+                <div class="card-body">
+                    <div class="table-fixed">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>S No</th>
+                                <th>Brand</th>
+                                <th>Specification</th>
+                                <th>Serial Number</th>
+                                <th>Other Device</th>
+                                <th>Quantity</th>
+                              
+                              </tr>
+                            </thead>
+                            <tbody >
+                              <tr *ngFor="let stockItem of stockData   | ngxSearchPipe:searchInputSystem.value">
+                                <th scope="row">{{ stockItem.sno }}</th>
+                                <td>{{ stockItem.brand }}</td>
+                                <td>{{ stockItem.Specification }}</td>
+                                <td>{{ stockItem.sr_number }}</td>
+                                <td>{{ stockItem.other_device }}</td>
+                                <td>{{ stockItem.quantity }}</td>
+                                <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                      <a href="#" class="btn btn-block btn-light">View all</a>
+                </div>
+            </div>
+        </div>
+       
+      </div>
+    </div>
+    
+
+

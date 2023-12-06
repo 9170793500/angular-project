@@ -1,0 +1,77 @@
+
+
+    
+ <app-header></app-header>
+
+ <div class="report-container">
+    <div style="margin: 38px;">
+      <h2 style="color: #0a1aff; margin-left: 112px;">INVENTORY MANAGEMENT</h2>
+      <div>
+        <input
+          style="
+            width: 270px;
+            margin-top: 10px;
+            margin-left: 534px;
+            text-align: center;
+            border-radius: 10px;
+          "
+          id="my_Input"
+          type="text"
+          id="searchInputInventry" [formControl]="searchInputInventry"
+          placeholder="Search.."
+        />
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table class="fl-table">
+        <thead>
+         <tr>
+           <th>S no</th>
+           <th>Device name</th>
+           <th>Storage</th>
+           <th>Serial number</th>
+           <th>Ram</th>
+           <th>Charger ser</th>
+           <th>Mouse ser</th>
+           <th>Extra device</th>
+           <th>Assign</th>
+           <th>Assign date</th>
+           <th>Edit</th>
+         </tr>
+       </thead>
+    
+    <tbody id="my_Table_cam" class="table-scroll">
+       <tr *ngFor="let item of systemInventry  | ngxSearchPipe:searchInputInventry.value">
+           <td>{{ item.sno }}</td>
+           <td>{{ item.device_name }}</td>
+           <td>{{ item.storage }}</td>
+           <td>{{ item.serial_number }}</td>
+           <td>{{ item.ram }}</td>
+           <td>{{ item.charger_serialnum }}</td>
+           <td>{{ item.mouse_serialnum }}</td>
+           <td>{{ item.extra_device }}</td>
+           <td>{{ item.assign }}</td>
+           <td>{{ item.assign_date }}</td>
+           <td>
+             <form (submit)="submitForm()">
+               <button
+                 class="open-button"
+                 style="
+                   color: #0a1aff;
+                   width: 25px;
+                   margin-inline-end: 23px;
+                   background-color: aqua;
+                   border-color: aqua;
+                 "
+                 type="submit"
+               >
+                 &#9998;
+               </button>
+             </form>
+           </td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+ </div>
+ 

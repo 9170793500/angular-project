@@ -1,0 +1,39 @@
+
+
+<!-- src/app/MyComponent/dashboard/dashboard.component.html -->
+
+<app-header></app-header>
+
+<div class="box-container" style="margin-left: 230px; margin-top: 100px; padding: 10px;">
+    <!-- ... box1, box2, box3, box4 HTML ... -->
+</div>
+
+<div class="con">
+    <div class="row" style="margin-left: 288px; margin-right: 20px;">
+        <div class="p-2 bd-highlight" style="width: 100%; margin-top: 0px;">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="mouseForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="deviceName">Device Name</label>
+                            <input type="text" name="device_name" class="form-control" id="deviceName" formControlName="device_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="brand">Brand</label>
+                            <input type="text" name="brand" class="form-control" id="brand" formControlName="brand">
+                        </div>
+                        <div class="form-group">
+                            <label for="serialNumber">Serial Number</label>
+                            <input type="text" name="serial_number" class="form-control" id="serialNumber" formControlName="serial_number">
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" name="quantity" class="form-control" id="quantity" formControlName="quantity">
+                        </div>
+                        <button type="submit" class="btn btn-primary " (click)="onSubmit()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper" style="height: 559px; margin-top: 116px;">
+    <form [formGroup]="inventoryForm" (ngSubmit)="onSubmit()">
+      <div class="formbold-input-wrapp formbold-mb-3">
+        <label for="device_name" class="formbold-form-label"><strong>Device name</strong></label>
+        <input type="text" class="formbold-form-input" id="device_name" formControlName="device_name">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="storage" class="formbold-form-label"><strong>Storage</strong></label>
+        <input type="text" class="formbold-form-input" id="storage" formControlName="storage">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="serial_number" class="formbold-form-label"><strong>Serial number</strong></label>
+        <input type="text" class="formbold-form-input" id="serial_number" formControlName="serial_number">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="ram" class="formbold-form-label"><strong>Ram</strong></label>
+        <input type="text" class="formbold-form-input" id="ram" formControlName="ram">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="charger_serialnum" class="formbold-form-label"><strong>Charger serial num</strong></label>
+        <input type="text" class="formbold-form-input" id="charger_serialnum" formControlName="charger_serialnum">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="mouse_serialnum" class="formbold-form-label"><strong>Mouse serial num</strong></label>
+        <input type="text" class="formbold-form-input" id="mouse_serialnum" formControlName="mouse_serialnum">
+      </div>
+      <div class="formbold-mb-3">
+        <label for="extra_device" class="formbold-form-label"><strong>Extra device</strong></label>
+        <input type="text" class="formbold-form-input" id="extra_device" formControlName="extra_device">
+      </div>
+      <div class="formbold-input-flex">
+        <label for="assign" class="formbold-form-label"><strong>Assign</strong></label>
+        <input type="text" class="formbold-form-input" id="assign" formControlName="assign">
+      </div>
+      <div class="formbold-input-flex">
+        <label for="assign_date" class="formbold-form-label"><strong>Assign date</strong></label>
+        <input type="date" class="formbold-form-input" id="assign_date" formControlName="assign_date">
+      </div>
+      <button type="submit" class="formbold-btn" (click)="onSubmit()"><strong>Submit</strong></button>
+    </form>
+  </div>
+</div>
